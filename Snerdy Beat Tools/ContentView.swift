@@ -55,10 +55,12 @@ struct ContentView: View {
                     .bold()
                     .padding()
                 Text("\(bpmManager.bpmFinal)")
+                    .opacity(bpmManager.bpmFinal == 0 ? 0 : 1)
                     .font(.system(size: 75))
                     .padding()
                 Text("Reset")
                     .bold()
+                    .opacity(bpmManager.bpmFinal == 0 ? 0 : 1)
                     .padding()
                     .foregroundColor(.white)
                     .onTapGesture {
